@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import Pokemon from "./components/pokemon"
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <Container>
+      <SiteBranding>今日は、ポケモン！</SiteBranding>
+      <p> ^ (( Hello, Pokemon! )) ^</p>
+      <Pokemon />
+    </Container>
+  );
+}
+
+function Container(props) {
+  return (
+    <div
+      className="container"
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        color: "red",
+      }}
+    >
+      {props.children}
     </div>
   );
+}
+
+function SiteBranding({children}) {
+  return <h1 className="site-branding">{children}</h1>;
 }
 
 export default App;
