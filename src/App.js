@@ -1,4 +1,4 @@
-import Pokemon from "./components/pokemon"
+import Pokemon from "./components/pokemon";
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
   );
 }
 
-function Container(props) {
+function Container({ children }) {
   return (
     <div
       className="container"
@@ -21,12 +21,12 @@ function Container(props) {
         color: "red",
       }}
     >
-      {props.children}
+      {children}
     </div>
   );
 }
 
-function SiteBranding({children}) {
+function SiteBranding({ children }) {
   return <h1 className="site-branding">{children}</h1>;
 }
 

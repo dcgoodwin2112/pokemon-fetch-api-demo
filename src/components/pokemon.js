@@ -43,7 +43,7 @@ function Pokemon(props) {
   );
 }
 
-function PokeOption({ name, current }) {
+function PokeOption({ name }) {
   return <option value={name}>{name}</option>;
 }
 
