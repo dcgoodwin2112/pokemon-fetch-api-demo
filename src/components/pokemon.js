@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-function Pokemon(props) {
+function Pokemon() {
   const defaultValue = window.localStorage.getItem("name") ?? "pikachu";
   const [name, setName] = useState(defaultValue);
   const [data, setData] = useState(null);
